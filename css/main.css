@@ -3,6 +3,9 @@
 	padding: 0px;
 	margin: 0px;
 }
+body{
+	position: relative;
+}
 img{
 	margin-top: 58%;
 	max-width: 50%;
@@ -41,10 +44,15 @@ img{
 	opacity: 0.3;
 }
 #row_botones{
-    margin-top: 14%;
+    margin-top: 55%;
     margin-bottom: 6%;
 }
 .aBtn{
 	text-decoration-style: none;
 	color: white;
+}
+.aBtn:hover{
+	text-decoration: none;
+	background-color: black;
+	opacity: 0.5;
 }
