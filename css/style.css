@@ -1,0 +1,41 @@
+header{
+	padding-top: 3%;
+}
+#btn_left{
+	font-size: 250%;
+	padding-top: 39%;
+}
+#title{
+	font-size: 318%;
+	padding-left: 16%;
+}
+#text_join{
+	font-size: 110%;
+	padding-left: 12%;
+
+}
+#contenedor_input_select{
+	border: 1px solid gray;
+	padding-bottom: 76%
+}
+#input_select{
+	width: 100%;
+	padding-left: 0%;
+	margin-top: 3%;
+	margin-bottom: 3%;
+}
+#parrafo{
+	color: black;
+	text-align: center;
+}
+#next{
+	background-color: #e74c3c;
+	text-align: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-size: 300%;
+}
+.aBtn{
+	text-decoration-style: none;
+	color: white;
+}

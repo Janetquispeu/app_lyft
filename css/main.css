@@ -4,7 +4,8 @@
 	margin: 0px;
 }
 img{
-	max-width: 100%;
+	margin-top: 58%;
+	max-width: 50%;
 	max-height: 100%;
 }
 #titulo{
@@ -24,13 +25,26 @@ img{
 	background-color: black;
 	opacity: 0.6;
 }
-#btn_sign_in{
+#btn_login_in{
 	float: right;
+	width: 100%;
 }
 #btn_sign_up{
 	float: left;
+	width: 100%;
+	z-index: 3;
+	background-color: #2ecc71;
+	border: 1px solid #2ecc71;;
+}
+#btn_sign_up: hover{
+	background-color: #cccccc;
+	opacity: 0.3;
 }
 #row_botones{
-	margin-top: 62%;
-  margin-bottom: 15%;
+    margin-top: 14%;
+    margin-bottom: 6%;
+}
+.aBtn{
+	text-decoration-style: none;
+	color: white;
 }
