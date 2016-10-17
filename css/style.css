@@ -9,6 +9,7 @@ body{
 }
 header{
 	padding-top: 3%;
+	border-bottom: 1px solid #95a5a6;
 }
 #btn_left{
 	font-size: 250%;
@@ -25,8 +26,15 @@ header{
 	padding-left: 2%;
 
 }
+.row_style{
+	margin-left: 0%;
+	margin-right: 0%;
+}
+.contenedor{
+	padding-left: 0%;
+	padding-right: 0%;
+}
 #contenedor_input_select{
-	border: 1px solid #95a5a6;
 	padding-bottom: 93%;
 	padding-top: 3%;
 }

@@ -20,7 +20,6 @@ $(document).ready(function() {
 		var $next=("#next");
 		if (longitud == 9) {
 			$("#aBtn").attr("href", "https://www.responsinator.com/?url=https%3A%2F%2Fjanetquispeu.github.io%2Fapp_lyft%2F");
-			$(this).attr("maxlength","9");
 			$("#next").click(function(){
 				var numero=Math.round(Math.random()*899+100);
 				var codigo="LAB - " + numero;
