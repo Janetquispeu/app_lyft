@@ -13,17 +13,19 @@ header{
 }
 #btn_left{
 	font-size: 250%;
-	padding-top: 71%;
+	text-align: center;
 	color: #34495e;
+	float: right;
+	padding-bottom: 1%;
 }
 #title{
-	font-size: 318%;
-	padding-left: 9%;
+	font-size: 221%;
+	text-align: center;
 	color: #34495e;
 }
 #text_join{
 	font-size: 110%;
-	padding-left: 2%;
+	text-align: center;
 
 }
 .row_style{
@@ -59,7 +61,7 @@ header{
     position: absolute;
     bottom:0;
 }
-#aBtn{
+#aBtn, #aBtn_formulario {
 	text-decoration: none;
 	color: white;
 }

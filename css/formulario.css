@@ -1,0 +1,12 @@
+.form_container{
+	padding-left: 15%;
+    padding-top: 4%;
+}
+input:focus { 
+    background-color: #F5ECC7;
+}
+@media (min-width: 768px){}
+	.form_container{
+		padding: 1%;
+	}
+}
