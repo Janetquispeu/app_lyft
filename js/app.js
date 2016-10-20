@@ -35,14 +35,22 @@ $(document).ready(function() {
 
 	//Correr el puntero
 	$(".input").attr("maxlength","1");
-  $('.input').keyup(function(){
-    if($(this).val().length==$(this).attr("maxlength")){
-        $(this).parent().next().children().focus();
-    }
-    else{
-    	$(this).parent().prev().children().focus();
-    }
-  });
+	$(".input").keydown(function(evento) {
+		var ascii = evento.keyCode;
+		if ((ascii >= 48 && ascii <= 57) || ascii==8) {
+		  $('.input').keyup(function(){
+		    if($(this).val().length==$(this).attr("maxlength")){
+		        $(this).parent().next().children().focus();
+		    }
+		    else if(ascii==8){
+		    	$(this).parent().prev().children().focus();
+		    }
+		  });
+		 }
+		 else {
+			alert("El numero de verificación no es correcto");
+		}
+	});
 
 	//Join next
 	$("#numero_telefonico").text(window.localStorage.getItem("telefonoNum"));
@@ -63,16 +71,20 @@ $(document).ready(function() {
 		 var $lastName=$("#lastName").val().trim().length;
 		 var $email=$("#email").val().trim().length;
 		if ($firstName == 0 || $lastName == 0 || $email==0) {
-			alert("Ingrese todos los campos obligatorios");
+			alert("Ingrese todos los campos son obligatorios");
 		}
-		else if(($firstName>=2 && $firstName<=20) && ($lastName>=2 && $lastName<=20) && ($email>=2 && $email<=20) ){
-			var expresion=/^[a-zñáéíóúü]+$/gi
-			var email=/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-			if(!expresion.test($("#firstName").value) || !expresion.test($("#lastName").value) || !email.test($("#email").value)){
+		else if(($firstName>=2 && $firstName<=20) && ($lastName>=2 && $lastName<=20) && ($email>=5 && $email<=50) ){
+			var email=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+			var expresion=/^[0-9a-zA-ZáéíóúàèìòùÀÈÌÒÙÁÉÍÓÚñÑüÜ_\s]+$/;
+			var apellido=/^[0-9a-zA-ZáéíóúàèìòùÀÈÌÒÙÁÉÍÓÚñÑüÜ_\s]+$/;
+			if(email.test($("#email").value) || !expresion.test($("#firstName").value) || !apellido.test($("#lastName").value)){
 				alert("Ingrese datos correctos");
+			}else{
+				$(this).attr("href", "map.html");
 			}
+
 		}else{
-			alert("La cantidad de caracteres en mayor que 2 y menor o igual que 20");
+			alert("Datos incorrectos");
 		}
 	});	
 });
