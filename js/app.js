@@ -66,7 +66,9 @@ $(document).ready(function() {
 	});
 
 	//Validadndo formulario 
-	$("#aBtn_formulario").click(function(evento) {
+	
+
+	function validarFormulario(){
 		 var $firstName=$("#firstName").val().trim().length;
 		 var $lastName=$("#lastName").val().trim().length;
 		 var $email=$("#email").val().trim().length;
@@ -79,14 +81,21 @@ $(document).ready(function() {
 			var apellido=/^[0-9a-zA-ZáéíóúàèìòùÀÈÌÒÙÁÉÍÓÚñÑüÜ_\s]+$/;
 			if(email.test($("#email").value) || !expresion.test($("#firstName").value) || !apellido.test($("#lastName").value)){
 				alert("Ingrese datos correctos");
-			}else{
-				$(this).attr("href", "map.html");
 			}
-
 		}else{
 			alert("Datos incorrectos");
 		}
-	});	
+	}
+		
+	$("#aBtn_formulario").click(function(evento){
+		if($("#check").is(":checked")){
+			if(validarFormulario()==false){
+				$(this).attr("href","map.html");
+			}
+		}else{
+			$(this).attr("href","map.html");
+		}
+	});
 });
 
 

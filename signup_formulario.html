@@ -2,24 +2,23 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="stylesheet" type="text/css" href="css/join_style.css">
-		<link rel="stylesheet" type="text/css" href="css/formulario.css">
+		<link rel="shortcut icon" href="icono.ico">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<meta charset="utf-8">
 		<title>Lyft</title>
 	</head>
 	<body>
-		<header class="container-fluid">
-			<div class="row">
-				<div class="col-lg-2 col-xs-2"><a href="index.html"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true" id="btn_left"></span></a>
-				</div>
-				<div class="col-lg-10 col-xs-10">
-					<div id="title">Sign up</div>
-					<div id="text_join">Join now for free ride credit</div>
-				</div>
-			</div>
-		</header>
+		<nav>
+	    <div class="nav-wrapper">
+	      <a href="#" class="brand-logo center" id="title">Sign up</a>
+	      <ul >
+	        <li><a href="join.html"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true" id="btn_left"></span></a></li>
+	      </ul>
+	    </div>
+	  </nav>
+	  <div id="text_join">Join now for free ride credit</div>
 		<section class="container-fluid contenedor">
 			<form class="form-inline form_container">
 			  <div class="form-group">
@@ -42,6 +41,11 @@
 			  </div>
 			</form>
 		</section>
+		<form action="#">
+    <p id="checkbox">
+      <input type="checkbox" id="test5" id="check" />
+      <label for="test5">I agree to Lyft's <a href="" class="aceptar">Terms of Service</a></label>
+    </p>
 		<section id="next">
 			<a id="aBtn_formulario">Next</a>
 		</section>

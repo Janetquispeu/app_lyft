@@ -2,30 +2,34 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<link rel="shortcut icon" href="logo.ico">
-		<link rel="stylesheet" type="text/css" href="css/map.css">
+		<link rel="shortcut icon" href="icono.ico">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<meta charset="utf-8">
 		<title>Lyft</title>
 	</head>
-	<body id="fondo_lyft">
-		<header class="container-fluid" id="container_row">
-			<img src="logo.png">
-		</header>
-		<section>
-			<div class="container">
-				<div class="row" id="row_botones">
-					<div class="col-md-6 col-xs-6">
-						<button type="button" class="btn btn-primary btn-lg active" id="btn_login_in"><a href="#"></a>Login in</button>
-					</div>
-					<div class="col-md-6 col-xs-6 ">
-						<button type="button" class="btn btn-primary btn-lg active" id="btn_sign_up"><a href="signup.html" class="aBtn">Sign up</a></button>
+	<body>
+			<section id="fondo_lyft">
+				<div class="col s12 m12 l12">
+					<div class="contenedor_logo_lyft">
+						<img id="logo_lyft" src="css/img/logo.png"> 
+					</div> 
+					<div class="content_logo_lyft">
+						<img id="bigote_lyft" src="css/img/bigote_lyft.png"> 
 					</div>
 				</div>
-			</div>
-		</section>
-		<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+				<section>
+			    <div id="botones">
+			      <div class="row">
+				      <div class="col s6 m6 l6"><a class="waves-effect waves-light btn" id="btn_login_in" href="#">Login in</a></div>
+				      <div class="col s6 m6 l6"><a class="waves-effect waves-light btn" id="btn_sign_up" href="signup.html">Sign up</a></div>
+					  </div>
+			    </div>
+		    </section>
+	     </section>
+		<script type="text/javascript" src="js/vendor/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/vendor/materialize.min.js"></script>
 		<script type="text/javascript" src="js/app.js"></script>
 	</body>
 </html>

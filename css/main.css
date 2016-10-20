@@ -3,51 +3,50 @@
 	padding: 0px;
 	margin: 0px;
 }
-body{
-	position: relative;
-	width: 100vw;
-	height: 100vh;
-}
-img{
-	margin-top: 10%;
-	max-width: 50%;
-	max-height: 100%;
-}
+/*Estilos para el index.html */
 #fondo_lyft{
 	background-image: url("../css/img/lyft.jpg");
 	background-repeat: no-repeat;
-	background-attachment: fixed;
+	background-size: cover;
+	width: 100%;
+	overflow-y: auto;
+	position: relative;
+}
+.contenedor_logo_lyft, .content_logo_lyft{
+	padding-top: 2%;
+	text-align: center;
+}
+#botones{
+	bottom: 0;
+	position: relative;
+}
+#logo_lyft{
+	margin-left: 33%;
+	width: 22%;
+	display: block;
 }
 #btn_login_in{
 	float: right;
-	width: 100%;
 }
 #btn_sign_up{
-	float: left;
-	width: 100%;
-	z-index: 3;
-	background-color: #2ecc71;
-	border: 1px solid #2ecc71;;
+	
 }
-#btn_sign_up: hover{
-	background-color: #cccccc;
-	opacity: 0.3;
-}
-#row_botones{
-    margin-top: 55%;
-    margin-bottom: 6%;
-}
-.aBtn{
-	text-decoration-style: none;
-	color: white;
-}
-.aBtn:hover{
-	text-decoration: none;
-	background-color: black;
-	opacity: 0.5;
-}
-@media (min-width: 768px){}
-	.form_container{
-		padding: 1%;
+
+@media only screen and (min-width: 0){
+	#fondo_lyft{
+		height: 100vh;
+	}
+	.contenedor_logo_lyft{
+		padding-top: 42%;	
+	}
+	.content_logo_lyft{
+		padding-top: 10%;	
+	}
+	#logo_lyft, #bigote_lyft{
+		width: 30%;
+	}
+	#botones{
+		padding-top: 50%;
 	}
 }
+
