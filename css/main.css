@@ -5,28 +5,18 @@
 }
 body{
 	position: relative;
+	width: 100vw;
+	height: 100vh;
 }
 img{
-	margin-top: 58%;
+	margin-top: 10%;
 	max-width: 50%;
 	max-height: 100%;
 }
-#titulo{
-	font-size: 350%;
-	margin-bottom: 30%;
-	text-align: center;
-	z-index: 3;
-	color: white;
-}
 #fondo_lyft{
-	background-image: url("../css/img/taxi.jpg");
+	background-image: url("../css/img/lyft.jpg");
 	background-repeat: no-repeat;
-	background-size: cover;
 	background-attachment: fixed;
-}
-#container_row{
-	background-color: black;
-	opacity: 0.6;
 }
 #btn_login_in{
 	float: right;
@@ -55,4 +45,9 @@ img{
 	text-decoration: none;
 	background-color: black;
 	opacity: 0.5;
+}
+@media (min-width: 768px){}
+	.form_container{
+		padding: 1%;
+	}
 }

@@ -11,13 +11,16 @@ $(document).ready(function() {
 		var longitud = $(this).val().length;
 		var $next=("#next");
 		if (longitud == 9) {
-			$("#aBtn").attr("href", "https://www.responsinator.com/?url=https%3A%2F%2Fjanetquispeu.github.io%2Fapp_lyft%2F");
+			$("#aBtn").attr("href", "join.html");
 		}else {
 			$("#aBtn").removeAttr("href");
 		}
 	});
+	//Signup validacion de 9 numeros
+
 	$("#aBtn").click(function(evento) {
-		var longitud = $("#input_celular").val().length;
+		var telefono=$("#input_celular").val();
+		var longitud = telefono.length;
 		if (longitud == 9) {
 			var numero=Math.round(Math.random()*899+100);
 			var codigo="LAB - " + numero;
@@ -25,6 +28,32 @@ $(document).ready(function() {
 		}
 		else{
 			alert("Ingrese un número telefónico de 9 dígitos");
+		}
+		window.localStorage.setItem("codigoLab",numero);
+		window.localStorage.setItem("telefonoNum",telefono);
+	});
+
+	//Correr el puntero
+	$(".input").attr("maxlength","1");
+  $('.input').keyup(function(){
+    if($(this).val().length==$(this).attr("maxlength")){
+        $(this).parent().next().children().focus();
+    }
+    else{
+    	$(this).parent().prev().children().focus();
+    }
+  });
+
+	//Join next
+	$("#numero_telefonico").text(window.localStorage.getItem("telefonoNum"));
+	var codigoValido=localStorage.getItem("codigoLab");
+	$("#aBtn_nextJoin").click(function(){
+		var digito=$("#codigo_uno").val()+$("#codigo_dos").val()+$("#codigo_tres").val();
+		if (digito==codigoValido) {
+			$(this).attr("href", "signup_formulario.html");
+		}
+		else{
+			alert("El numero de verificación no es correcto");
 		}
 	});
 
@@ -45,14 +74,7 @@ $(document).ready(function() {
 		}else{
 			alert("La cantidad de caracteres en mayor que 2 y menor o igual que 20");
 		}
-	});
-
-	
-
-	
-
-	
-
+	});	
 });
 
 
