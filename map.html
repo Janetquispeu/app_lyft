@@ -1,40 +1,44 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
-		<link rel="stylesheet" type="text/css" href="css/map.css">
-		<link rel="shortcut icon" href="icono.ico">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-		<meta charset="utf-8">
-		<title>Lyft</title>
-	</head>
-	<body >
-		<div class="row">
-			<div id="map" class="col-md-12 col-xs-12"></div>
-		</div>
-		<span id="usuario" class="glyphicon glyphicon-user" aria-hidden="true">
-		</span>
-		<ul id="slide-out" class="side-nav">
-	    <li><div class="userView">
-	      <img class="background" src="css/img/bigote_lyft.png">
-	      <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
-	      <a href="#!name"><span class="white-text name">John Doe</span></a>
-	      <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
-	    </div></li>
-	    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-	    <li><a href="#!">Second Link</a></li>
-	    <li><div class="divider"></div></li>
-	    <li><a class="subheader">Subheader</a></li>
-	    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-	  </ul>
-	  <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5Lqy0Evyyf9XWSGvhFHDzrZw9WP8hdKA"
-  async defer></script>
-  	<script type="text/javascript" src="js/materialize/js/materialize.js"></script>
-		<script type="text/javascript" src="js/gmaps.js"></script>
-		<script type="text/javascript" src="js/map.js"></script>
-		</script>
-	</body>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="materialize/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="css/map.css">
+</head>
+<body>
+  <section>
+    <div id="map" class="col l12 m12 s12"></div>
+    <ul id="slide-out" class="side-nav side-nav-usuario">
+      <li>
+        <div class="userView center-align background_nav">
+          <img class="background" src="img/driver.jpg">
+          <a href="#!user" class="center-align"><img class="cir_user usuario_icono" src="img/usuarioLogo.png"></a>
+          <span id="copiaNombre" class="black-text center-align num_user"></span>
+          <span id="copiaApellido" class="black-text center-align num_user">  </span>
+          <a href="view.html"><span class="black-text name center-align view ">View profile</span></a>
+       </div>
+      </li>
+      <li><div class="divider"></div></li>
+      <li ><a href="#!" class="pd"><i class="material-icons icon">vpn_key</i>Home</a></li>
+      <li><div class="divider"></div></li>
+      <li><a href="#!" class="pd"><i class="material-icons icon">redeem</i>Free Rides</a></li>
+      <li><div class="divider"></div></li>
+      <li><a href="#!" class="pd"><i class="material-icons icon">schedule</i>Ride history</a></li>
+      <li><div class="divider"></div></li>
+      <li><a href="#!" class="pd"><i class="material-icons icon">payment</i>Payment</a></li>
+      <li><div class="divider"></div></li>
+      <li><a href="#!" class="pd"><i class="material-icons icon">live_help</i>Help</a></li>
+      <li><div class="divider"></div></li>
+      <li><a href="#!" class="pd"><i class="material-icons icon">settings</i>Setting</a></li>
+    </ul>
+    <a href="#" data-activates="slide-out" class="button-collapse"><img class="cir_user usuario_icono usuario_icono_map"  src="img/usuarioLogo.png"></a>
+  </section>
+  <script type="text/javascript" src="materialize/js/jquery-3.1.0.min.js"></script>
+  <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5Lqy0Evyyf9XWSGvhFHDzrZw9WP8hdKA"
+    async defer></script>
+  <script type="text/javascript" src="js/gmaps.js"></script>
+  <script type="text/javascript" src="js/map.js"></script>
+</body>
 </html>

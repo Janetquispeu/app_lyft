@@ -3,50 +3,130 @@
 	padding: 0px;
 	margin: 0px;
 }
+body{
+	position: relative;
+}
 /*Estilos para el index.html */
+.bg{
+		height: 100vh;
+		position: relative;
+	}
 #fondo_lyft{
-	background-image: url("../css/img/lyft.jpg");
+	background-image: url("../img/lyft.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	width: 100%;
-	overflow-y: auto;
 	position: relative;
+	height: 100vh;
 }
-.contenedor_logo_lyft, .content_logo_lyft{
-	padding-top: 2%;
-	text-align: center;
+.contenedorLogoLyft{
+	padding-top: 5%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
-#botones{
-	bottom: 0;
-	position: relative;
+.contenedorBigoteLyft{
+  padding-bottom: 11%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 #logo_lyft{
-	margin-left: 33%;
 	width: 22%;
-	display: block;
 }
 #btn_login_in{
 	float: right;
 }
-#btn_sign_up{
-	
+#botones{
+	position: absolute;
+		left: 0;
+		bottom: 0;
+		right: 0;
 }
 
-@media only screen and (min-width: 0){
-	#fondo_lyft{
-		height: 100vh;
+@media only screen and (max-width: 493px){
+	.contenedorLogoLyft{
+		top: 26% !important;
+  	position: absolute;
 	}
-	.contenedor_logo_lyft{
-		padding-top: 42%;	
+	.contenedorBigoteLyft{
+		position: absolute;
+		top: 46%;
+  	left: 4%;
 	}
-	.content_logo_lyft{
-		padding-top: 10%;	
-	}
-	#logo_lyft, #bigote_lyft{
+	#logo_lyft{
 		width: 30%;
 	}
+	 #bigote_lyft{
+	 	width: 30%;
+	}
 	#botones{
-		padding-top: 50%;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+}
+@media only screen and (max-width: 760px){
+	.contenedorLogoLyft{
+  	position: absolute;
+	}
+	.contenedorBigoteLyft{
+		position: absolute;
+		top: 46%;
+  	left: 4%;
+	}
+	#logo_lyft{
+		width: 30%;
+	}
+	 #bigote_lyft{
+	 	width: 30%;
+	}
+	#botones{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+}
+
+@media only screen and (max-width: 960px){
+	.contenedorLogoLyft{
+  	position: absolute;
+	}
+	.contenedorBigoteLyft{
+		position: absolute;
+	}
+	#logo_lyft{
+		width: 30%;
+	}
+	 #bigote_lyft{
+	 	width: 30%;
+	}
+	#botones{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+}
+@media only screen and (max-width: 1325px){
+	.contenedorLogoLyft{
+  	position: absolute;
+	}
+	.contenedorBigoteLyft{
+		position: absolute;
+	}
+	#logo_lyft{
+		width: 30%;
+	}
+	 #bigote_lyft{
+	 	width: 30%;
+	}
+	#botones{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		right: 0;
 	}
 }
 

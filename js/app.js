@@ -31,6 +31,7 @@ $(document).ready(function() {
 		}
 		window.localStorage.setItem("codigoLab",numero);
 		window.localStorage.setItem("telefonoNum",telefono);
+
 	});
 
 	//Correr el puntero
@@ -52,6 +53,11 @@ $(document).ready(function() {
 		}
 	});
 
+	$("#btn_resentCode").click(function(evento){
+		var codVerificacion=localStorage.getItem("codigoLab");
+		alert(codVerificacion);
+	});
+
 	//Join next
 	$("#numero_telefonico").text(window.localStorage.getItem("telefonoNum"));
 	var codigoValido=localStorage.getItem("codigoLab");
@@ -68,7 +74,7 @@ $(document).ready(function() {
 	//Validadndo formulario 
 	
 
-	function validarFormulario(){
+	$("#aBtn_formulario").click(function(evento){
 		 var $firstName=$("#firstName").val().trim().length;
 		 var $lastName=$("#lastName").val().trim().length;
 		 var $email=$("#email").val().trim().length;
@@ -82,12 +88,15 @@ $(document).ready(function() {
 			if(email.test($("#email").value) || !expresion.test($("#firstName").value) || !apellido.test($("#lastName").value)){
 				alert("Ingrese datos correctos");
 			}
+			else {
+				$(this).attr("href","map.html");
+			}
 		}else{
 			alert("Datos incorrectos");
 		}
-	}
+	});
 		
-	$("#aBtn_formulario").click(function(evento){
+	/*$("#aBtn_formulario").click(function(evento){
 		if($("#check").is(":checked")){
 			if(validarFormulario()==false){
 				$(this).attr("href","map.html");
@@ -95,7 +104,8 @@ $(document).ready(function() {
 		}else{
 			$(this).attr("href","map.html");
 		}
-	});
+	}); */
+
 });
 
 

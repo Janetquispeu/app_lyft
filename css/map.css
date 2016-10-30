@@ -1,14 +1,67 @@
-#map{
-	width: 100vw;
-	height: 100vh;
+
+body{
+    position: relative;
+    height: 100vh;
+
 }
-#usuario{
-	z-index:100 ;
+#map{
+    height:100vh;
+    width: 100vw;
+    position: absolute;
+}
+.usuario_icono{
 	position: absolute;
-	margin-left: 74%;
-	margin-top: 2%;
-	font-size: 200%;
-	padding: 4%;
-	border-radius: 100%;
-	background-color: #F3F3F3;
+	margin-top: -118rem;
+	width: 8%;
+	opacity: 0.8;
+}
+.usuario_icono_map{
+	margin-left: 48px;
+}
+.view{
+    font-size:30px;
+    padding:30px 0px;
+}
+.num_user{
+    font-size: 40px;
+}
+.cir_user{
+    margin-top: 30px;
+}
+.pd{
+    font-size: 45px !important;
+   height: 120px !important;
+   padding: 40px 30px !important;
+}
+.icon{
+    font-size: 55px !important;
+}
+#copiaNombre{
+    padding-right:10px;
+}
+header, main, footer {
+      padding-left: 300px;
+}
+
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+  img{
+  	width: 100%;
+  }
+  #map{
+		zoom: 1;
+  }
+  .side-nav-usuario{
+  	width: 80%;
+
+  }
+ 	.background_nav{
+ 		padding-top: 13% !important;
+ 		padding-bottom: 13% !important;
+ 	}
+ 	.icon{
+ 		margin: 0 80px 0 0!important;
+ 	}
 }
