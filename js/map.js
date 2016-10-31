@@ -73,7 +73,7 @@ $("#direccion").click(function(evento){
 //   {
 //     navigator.geolocation.clearWatch(watch_id);
 //   };
-// });
+ });
   
 };
 
