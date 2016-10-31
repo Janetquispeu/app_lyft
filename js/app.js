@@ -79,8 +79,13 @@ $(document).ready(function() {
 		var regexApellido = /^[a-zñáéíóúü]+$/gi;
 		var regexCorreo = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 
-  if ((nombre.length>=2 && nombre.length<=20) && (apellido.length>=2 && apellido.length<=20) && (email.length>=5 && email.length<=50)) {   
-    alert('Ingrese datos correctos');
+  if (nombre.trim().length == 0 || apellido.trim().length == 0 ||  email.length == 0 ) {
+    // Si no se cumple la condicion...
+    alert("Campos Obligatorios");
+    return false;
+  }
+  else if ((nombre.trim().length<2 || nombre.trim().length>20) || (apellido.trim().length<2 || apellido.trim().length>21) || (email.length<4 || email.length>51)) {   
+    alert("cantidad de letras no admitidas");
     return false;
   }
   else if (!regexNombre.test(nombre) || !regexApellido.test(apellido) || !regexCorreo.test(correo)) {
@@ -88,19 +93,18 @@ $(document).ready(function() {
     alert("Ingrese datos correctos");
     return false;
   }
-  else if ((nombre == null || nombre.length == 0 || /^\s+$/.test(nombre)) && (apellido == null || apellido.length == 0 || /^\s+$/.test(apellido)) && (email == null || email.length == 0 || /^\s+$/.test(email))) {
-    // Si no se cumple la condicion...
-    alert("Ingrese datos correctos");
-    return false;
-  }
-  else if(!$("#check").is(":checked")){
-  	alert("Debe aceptar las condiciones");
-  	return false;
-  }
-  $("#aBtn_formulario").attr("href","map.html");
   return true;
 }
-	$("#aBtn_formulario").click(validacion);
+	$("#aBtn_formulario").click(function(evento){
+		if($('#test5').is(':checked')){
+			if(validacion()){
+				$("#aBtn_formulario").attr("href","map.html");
+			}
+
+		}else{
+			alert("Debe aceptar las condiciones");
+		}
+	});
 
 });
 		
