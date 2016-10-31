@@ -1,11 +1,26 @@
+@media only screen and (max-width: 450px){
+	.row_stylejoin{
+		padding-top: 10%;
+	}
+	.form_container{
+		padding: 9%;
+	    
+	}
+	#title{
+		font-size: 131%;
+	}
+	#btn_left {
+  	font-size: 171% !important;
+	}
+	#lab{
+		font-size: 152% !important;
+  	padding-top: 5%;
+	}
+}
 *{
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
-}
-body{
-	position: relative;
-	height: 100vh;
 }
 header{
 	padding-top: 3%;
@@ -79,8 +94,7 @@ header{
 }
 #lab{
 	text-align: center;
-	font-size: 130%;
-	padding-top: 4%;
+	font-size: 244%;
 }
 .row_stylejoin{
 	padding-top: 5%;
@@ -92,12 +106,3 @@ header{
 	text-align: center;
 }
 
-@media only screen and (min-width: 0){
-	.row_stylejoin{
-		padding-top: 10%;
-	}
-	.form_container{
-		padding: 9%;
-	    
-	}
-}
