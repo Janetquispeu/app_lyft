@@ -22,7 +22,7 @@ var funcionExito = function(posicion) {
   var lon = posicion.coords.longitude;
   var map=  new GMaps({
     div: '#map',
-    zoom: 16,
+    zoom: 15,
     lat: lat,
     lng: lon,
     mapTypeControl: false,
@@ -37,6 +37,44 @@ var funcionExito = function(posicion) {
       alert('You clicked in this marker');
     }
   });
+
+  var dir = "";
+  var latlng = new google.maps.LatLng(lat, lon);
+  geocoder = new google.maps.Geocoder();
+  geocoder.geocode({"latLng": latlng}, function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+      if (results[0]) {
+        dir = results[0].formatted_address;
+      } else {
+        dir = "No se ha podido obtener ninguna dirección en esas coordenadas.";
+      }
+    }
+    $("#direccion").val(dir);
+  });
+
+$("#direccion").click(function(evento){
+  $("#direccion").val("");
+//   var dato=$("#direccion").val();
+
+//   var watch_id = navigator.geolocation.watchPosition(function(objPosition)
+//   {
+//     // Procesar posición
+//     var lon = objPosition.coords.longitude;
+//     var lat = objPosition.coords.latitude;
+//   }, function(objPositionError)
+//   {
+//     // Procesar errores
+//   }, {
+//     maximumAge: 75000,
+//     timeout: 15000
+//   });
+
+//   document.getElementById.value("#direccion").onclick = function()
+//   {
+//     navigator.geolocation.clearWatch(watch_id);
+//   };
+// });
+  
 };
 
 var funcionError = function (error) {

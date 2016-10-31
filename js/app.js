@@ -78,6 +78,8 @@ $(document).ready(function() {
 		var regexNombre = /^[a-zñáéíóúü]+$/gi;
 		var regexApellido = /^[a-zñáéíóúü]+$/gi;
 		var regexCorreo = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+		localStorage.setItem("nombre", nombre);
+		localStorage.setItem("apellido", apellido);
 
   if (nombre.trim().length == 0 || apellido.trim().length == 0 ||  email.length == 0 ) {
     // Si no se cumple la condicion...
@@ -105,6 +107,9 @@ $(document).ready(function() {
 			alert("Debe aceptar las condiciones");
 		}
 	});
+
+	$("#copiaNombre").text(localStorage.getItem("nombre"));
+	$("#copiaApellido").text(localStorage.getItem("apellido"));
 
 });
 		

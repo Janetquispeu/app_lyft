@@ -5,6 +5,8 @@
     <link rel="stylesheet" type="text/css" href="materialize/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
    <link rel="stylesheet" type="text/css" href="css/map.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+   <meta charset="utf-8">
 </head>
 <body>
   <section>
@@ -13,9 +15,11 @@
       <li>
         <div class="userView center-align background_nav">
           <img class="background" src="img/driver.jpg">
-          <a href="#!user" class="center-align"><img class="cir_user usuario_icono" src="img/usuarioLogo.png"></a>
-          <span id="copiaNombre" class="black-text center-align num_user"></span>
-          <span id="copiaApellido" class="black-text center-align num_user">  </span>
+          <a href="#!user" class="center-align "><img class="cir_user usuario_icono" src="img/usuarioLogo.png"></a>
+          <section class="datos">
+            <span id="copiaNombre" class="black-text center-align num_user"></span>
+            <span id="copiaApellido" class="black-text center-align num_user">  </span>
+          </section>
           <a href="view.html"><span class="black-text name center-align view ">View profile</span></a>
        </div>
       </li>
@@ -32,13 +36,17 @@
       <li><div class="divider"></div></li>
       <li><a href="#!" class="pd"><i class="material-icons icon">settings</i>Setting</a></li>
     </ul>
-    <a href="#" data-activates="slide-out" class="button-collapse"><img class="cir_user usuario_icono usuario_icono_map"  src="img/usuarioLogo.png"></a>
+    <a href="#" data-activates="slide-out" class="button-collapse"><img class="cir_user usuario_icono_map"  src="img/usuarioLogo.png"></a>
   </section>
-  <script type="text/javascript" src="materialize/js/jquery-3.1.0.min.js"></script>
+  <section class="direccion">
+    <input type="text" name="direccion" placeholder="direccion" id="direccion">
+  </section>
+  <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
   <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5Lqy0Evyyf9XWSGvhFHDzrZw9WP8hdKA"
     async defer></script>
   <script type="text/javascript" src="js/gmaps.js"></script>
   <script type="text/javascript" src="js/map.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
