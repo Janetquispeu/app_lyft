@@ -111,6 +111,9 @@ $(document).ready(function() {
 	$("#copiaNombre").text(localStorage.getItem("nombre"));
 	$("#copiaApellido").text(localStorage.getItem("apellido"));
 
+	$("#nombre").text(localStorage.getItem("nombre"));
+	$("#apellido").text(localStorage.getItem("apellido"));
+
 });
 		
 

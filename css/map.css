@@ -1,3 +1,28 @@
+@media only screen and (max-width : 450px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+  img{
+    width: 100%;
+  }
+  #map{
+    zoom: 1;
+  }
+  .side-nav-usuario{
+    width: 80%;
+  }
+  .background_nav{
+    padding-top: 13% !important;
+    padding-bottom: 13% !important;
+  }
+  .icon{
+    margin: 0 80px 0 0!important;
+  }
+  .direccion{
+    width: 68% !important;
+  }
+}
+
 body{
     position: relative;
     height: 100vh;
@@ -48,7 +73,7 @@ body{
 .direccion{
   position: absolute;
   bottom: 59px;
-  width: 50%;
+  width: 68%;
   left: 29%;
 
 }
@@ -62,24 +87,3 @@ header, main, footer {
       padding-left: 300px;
 }
 
-@media only screen and (max-width : 450px) {
-  header, main, footer {
-    padding-left: 0;
-  }
-  img{
-  	width: 100%;
-  }
-  #map{
-		zoom: 1;
-  }
-  .side-nav-usuario{
-  	width: 80%;
-  }
- 	.background_nav{
- 		padding-top: 13% !important;
- 		padding-bottom: 13% !important;
- 	}
- 	.icon{
- 		margin: 0 80px 0 0!important;
- 	}
-}
