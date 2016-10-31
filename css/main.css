@@ -1,3 +1,20 @@
+@media only screen and (max-width: 450px){
+	.contenedorLogoLyft{
+  	position: relative;
+  	padding-top: 57% !important;
+	}
+	.contenedorBigoteLyft{
+		position: relative;
+		padding-top: 5% !important;
+	}
+	#logo_lyft{
+		width: 30%;
+	}
+	 #bigote_lyft{
+	 	width: 30%;
+	}
+}
+
 *{
 	box-sizing: border-box;
 	padding: 0px;
@@ -33,6 +50,9 @@ body{
 #logo_lyft{
 	width: 22%;
 }
+#bigote_lyft{
+	 	width: 30%;
+}
 #btn_login_in{
 	float: right;
 }
@@ -43,90 +63,5 @@ body{
 		right: 0;
 }
 
-@media only screen and (max-width: 493px){
-	.contenedorLogoLyft{
-		top: 26% !important;
-  	position: absolute;
-	}
-	.contenedorBigoteLyft{
-		position: absolute;
-		top: 49%;
-  	left: 8%;
-	}
-	#logo_lyft{
-		width: 30%;
-	}
-	 #bigote_lyft{
-	 	width: 30%;
-	}
-	#botones{
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		right: 0;
-	}
-}
-@media only screen and (max-width: 760px){
-	.contenedorLogoLyft{
-  	position: absolute;
-	}
-	.contenedorBigoteLyft{
-		position: absolute;
-		top: 46%;
-  	left: 4%;
-	}
-	#logo_lyft{
-		width: 30%;
-	}
-	 #bigote_lyft{
-	 	width: 30%;
-	}
-	#botones{
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		right: 0;
-	}
-}
 
-@media only screen and (max-width: 960px){
-	.contenedorLogoLyft{
-  	position: absolute;
-	}
-	.contenedorBigoteLyft{
-		position: absolute;
-	}
-	#logo_lyft{
-		width: 30%;
-	}
-	 #bigote_lyft{
-	 	width: 30%;
-	}
-	#botones{
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		right: 0;
-	}
-}
-@media only screen and (max-width: 1325px){
-	.contenedorLogoLyft{
-  	position: absolute;
-	}
-	.contenedorBigoteLyft{
-		position: absolute;
-	}
-	#logo_lyft{
-		width: 30%;
-	}
-	 #bigote_lyft{
-	 	width: 30%;
-	}
-	#botones{
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		right: 0;
-	}
-}
 
