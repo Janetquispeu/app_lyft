@@ -55,7 +55,7 @@ $(document).ready(function() {
 
 	$("#btn_resentCode").click(function(evento){
 		var codVerificacion=localStorage.getItem("codigoLab");
-		alert(codVerificacion);
+		alert("LAB - " +  codVerificacion);
 	});
 
 	//Join next
@@ -64,49 +64,48 @@ $(document).ready(function() {
 	$("#aBtn_nextJoin").click(function(){
 		var digito=$("#codigo_uno").val()+$("#codigo_dos").val()+$("#codigo_tres").val();
 		if (digito==codigoValido) {
-			$(this).attr("href", "signup_formulario.html");
+			$(this).attr("href","formulario.html");
 		}
 		else{
 			alert("El numero de verificación no es correcto");
 		}
 	});
 
-	//Validadndo formulario 
-	
+	function validacion() {
+		var nombre=$("#firstName").val();
+		var apellido=$("#lastName").val();
+		var correo=$("#email").val();
+		var regexNombre = /^[a-zñáéíóúü]+$/gi;
+		var regexApellido = /^[a-zñáéíóúü]+$/gi;
+		var regexCorreo = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 
-	$("#aBtn_formulario").click(function(evento){
-		 var $firstName=$("#firstName").val().trim().length;
-		 var $lastName=$("#lastName").val().trim().length;
-		 var $email=$("#email").val().trim().length;
-		if ($firstName == 0 || $lastName == 0 || $email==0) {
-			alert("Ingrese todos los campos son obligatorios");
-		}
-		else if(($firstName>=2 && $firstName<=20) && ($lastName>=2 && $lastName<=20) && ($email>=5 && $email<=50) ){
-			var email=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
-			var expresion=/^[0-9a-zA-ZáéíóúàèìòùÀÈÌÒÙÁÉÍÓÚñÑüÜ_\s]+$/;
-			var apellido=/^[0-9a-zA-ZáéíóúàèìòùÀÈÌÒÙÁÉÍÓÚñÑüÜ_\s]+$/;
-			if(email.test($("#email").value) || !expresion.test($("#firstName").value) || !apellido.test($("#lastName").value)){
-				alert("Ingrese datos correctos");
-			}
-			else {
-				$(this).attr("href","map.html");
-			}
-		}else{
-			alert("Datos incorrectos");
-		}
-	});
-		
-	/*$("#aBtn_formulario").click(function(evento){
-		if($("#check").is(":checked")){
-			if(validarFormulario()==false){
-				$(this).attr("href","map.html");
-			}
-		}else{
-			$(this).attr("href","map.html");
-		}
-	}); */
+  if ((nombre.length>=2 && nombre.length<=20) && (apellido.length>=2 && apellido.length<=20) && (email.length>=5 && email.length<=50)) {   
+    alert('Ingrese datos correctos');
+    return false;
+  }
+  else if (!regexNombre.test(nombre) || !regexApellido.test(apellido) || !regexCorreo.test(correo)) {
+    // Si no se cumple la condicion...
+    alert("Ingrese datos correctos");
+    return false;
+  }
+  else if ((nombre == null || nombre.length == 0 || /^\s+$/.test(nombre)) && (apellido == null || apellido.length == 0 || /^\s+$/.test(apellido)) && (email == null || email.length == 0 || /^\s+$/.test(email))) {
+    // Si no se cumple la condicion...
+    alert("Ingrese datos correctos");
+    return false;
+  }
+  else if(!$("#check").is(":checked")){
+  	alert("Debe aceptar las condiciones");
+  	return false;
+  }
+  $("#aBtn_formulario").attr("href","map.html");
+  return true;
+}
+	$("#aBtn_formulario").click(validacion);
 
 });
+		
+
+
 
 
 

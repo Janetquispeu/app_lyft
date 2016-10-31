@@ -1,21 +1,3 @@
-@media only screen and (max-width: 450px){
-	.row_stylejoin{
-		padding-top: 10%;
-	}
-	.form_container{
-		padding: 9%;
-	}
-	#title{
-		font-size: 131%;
-	}
-	#btn_left {
-  	font-size: 171% !important;
-	}
-	#lab{
-		font-size: 152% !important;
-  	padding-top: 5%;
-	}
-}
 *{
 	box-sizing: border-box;
 	padding: 0;
@@ -30,26 +12,19 @@ header{
 	color: white;
 	vertical-align: middle;
 }
-#title{
-	text-decoration: none;
-}
 #text_join{
 	font-size: 110%;
 	text-align: center;
 
 }
-.row_stylejoin{
-	margin-left: 0%;
-	margin-right: 0%;
+#title{
+	text-decoration: none;
 }
 .contenedor{
 	padding-left: 0%;
 	padding-right: 0%;
 }
-#mensaje{
-	text-align: center;
-}
-#nextJoin{
+#next{
 	width: 100%;
 	background-color: #EE6E73;
 	text-align: center;
@@ -60,26 +35,33 @@ header{
   position: absolute;
   bottom:0;
 }
-#aBtn_nextJoin{
+#firstName,#lastName,#email{
+	text-align: center;
+}
+#aBtn, #aBtn_formulario{
 	text-decoration: none;
 	color: white;
 }
-#aBtn_nextJoin:hover{
+#aBtn:hover{
 	text-decoration: none;
 }
-#nextJoin:hover{
+#next:hover{
 	background-color: black;
 	opacity: 0.5;
 }
-#btn_resentCode{
-	margin-top: 5%;
-}
-#lab{
-	text-align: center;
-	font-size: 244%;
+#btn_pais{
+	background-color: #A9A9A9;
+	padding-left: 12%;
 }
 .row_stylejoin{
 	padding-top: 5%;
 }
-
+.form_container{
+	text-align: center;
+	padding-top: 8%;
+  padding-bottom: 3%;
+}
+#checkbox{
+	text-align: center;
+}
 
