@@ -33,3 +33,23 @@
 	float: left;
 	padding-left: 6%;
 }
+
+@media only screen and (max-width: 375px){
+	.bg{
+		height: 27vh;
+	}
+	#usuarioLogo {
+    width: 24%;
+	}
+	#nombre {
+    padding-left: 25%;
+    font-size: 201%;
+	}
+	#apellido {
+    font-size: 201%;
+	}
+	.mt {
+    padding: 12%;
+    font-size: 207%;
+  }
+}

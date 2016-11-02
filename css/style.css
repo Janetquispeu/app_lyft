@@ -25,6 +25,9 @@ header{
 	padding-top: 3%;
 	border-bottom: 1px solid #95a5a6;
 }
+nav{
+	background-color: #EA0B8C !important;
+}
 #btn_left{
 	font-size: 220%;
 	color: white;
@@ -51,7 +54,7 @@ header{
 }
 #nextJoin{
 	width: 100%;
-	background-color: #EE6E73;
+	background-color: #C61167;
 	text-align: center;
   padding-top: 2%;
   padding-bottom: 2%;
