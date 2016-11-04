@@ -19,10 +19,6 @@
     padding-top: 15% !important;
   }
 }
-@media only screen and (max-width: 1024px){
-	.contenedorLogoLyft {
-    padding-top: 15% !important;
-}
 
 *{
 	box-sizing: border-box;
