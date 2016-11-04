@@ -14,10 +14,14 @@
 	 	width: 30%;
 	}
 }
-@media only screen and (max-width: 768px){
+@media (min-width: 568px) and (max-width: 768px){
 	.contenedorLogoLyft {
-    padding-top: 46% !important;
+    padding-top: 15% !important;
   }
+}
+@media only screen and (max-width: 1024px){
+	.contenedorLogoLyft {
+    padding-top: 15% !important;
 }
 
 *{
