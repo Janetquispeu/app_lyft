@@ -1,25 +1,3 @@
-@media only screen and (max-width: 450px){
-	.contenedorLogoLyft{
-  	position: relative;
-  	padding-top: 57% !important;
-	}
-	.contenedorBigoteLyft{
-		position: relative;
-		padding-top: 5% !important;
-	}
-	#logo_lyft{
-		width: 30%;
-	}
-	 #bigote_lyft{
-	 	width: 30%;
-	}
-}
-@media (min-width: 568px) and (max-width: 768px){
-	.contenedorLogoLyft {
-    padding-top: 15% !important;
-  }
-}
-
 *{
 	box-sizing: border-box;
 	padding: 0px;
@@ -67,6 +45,31 @@ body{
 		bottom: 0;
 		right: 0;
 }
-
+@media(max-width: 1024px){
+	.contenedorLogoLyft{
+  	padding-top: 25%;
+	}
+}
+@media(max-width: 768px){
+	.contenedorLogoLyft{
+  	padding-top: 39%;
+	}
+}
+@media (min-width: 667px) and (max-width: 736px){
+	.contenedorLogoLyft {
+    padding-top: 6%;
+  }
+}
+@media (min-width: 568px) and (max-width: 666px){
+	.contenedorLogoLyft {
+    padding-top: 10%;
+  }
+}
+@media(max-width: 414px){
+	.contenedorLogoLyft{
+  	position: relative;
+  	padding-top: 57%;
+	}
+}
 
 
