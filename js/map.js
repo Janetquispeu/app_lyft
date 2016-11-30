@@ -13,8 +13,8 @@
       menuWidth: 500, // Default is 240
       edge: 'left', // Choose the horizontal origin
       closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-    }
-  );
+    });
+  
 };
 
 var funcionExito = function(posicion) {
@@ -51,36 +51,69 @@ var funcionExito = function(posicion) {
     }
     $("#direccion").val(dir);
   });
-
-$("#direccion").click(function(evento){
-  $("#direccion").val("");
-//   var dato=$("#direccion").val();
-
-//   var watch_id = navigator.geolocation.watchPosition(function(objPosition)
-//   {
-//     // Procesar posición
-//     var lon = objPosition.coords.longitude;
-//     var lat = objPosition.coords.latitude;
-//   }, function(objPositionError)
-//   {
-//     // Procesar errores
-//   }, {
-//     maximumAge: 75000,
-//     timeout: 15000
-//   });
-
-//   document.getElementById.value("#direccion").onclick = function()
-//   {
-//     navigator.geolocation.clearWatch(watch_id);
-//   };
- });
   
+
+  
+    
 };
+
 
 var funcionError = function (error) {
   console.log(error);
 };
 
-$(document).ready(cargarPagina);
+ $(document).ready(cargarPagina);
+
+
+// var distancia = function() {
+//   var distancia = ((google.maps.geometry.spherical.computeDistanceBetween(lat,lon, desLatlon))/1000).toFixed(2);
+//   var costo = (2.17*distancia).toFixed(2);
+//   alert("The approximate distance is " + distancia + "km" + "\n"
+//       + "The approximate cost is $. " + costo);
+//   };
+// };
+// $("#destino").click(function(evento){
+//   $(".fondo-opaco").removeClass("none");
+//   $(".fondo-opaco").css("display","block");
+
+// });
+// $("#go-to").click(travelToAddress);
+// $(document).ready(cargarPagina);
   
 
+// var desLatlon;
+//   var directionsRenderer;
+//   var directionsService;
+
+  
+//   var travelToAddress = function() {
+//     var destiny = document.getElementById("destiny").value;
+//     directionsService = new google.maps.DirectionsService();
+
+//     var geocoder = new google.maps.Geocoder();
+//     geocoder.geocode( { "address": destiny}, function(results, status) {
+//       if (status == google.maps.GeocoderStatus.OK) {
+//           var latitude = results[0].geometry.location.lat();
+//           var  longitude = results[0].geometry.location.lng();
+//           desLatlon =new google.maps.LatLng(latitude, longitude);
+//       } 
+//     });
+
+//     var request = {
+//         lat: lat,
+//         lng: lon,
+//         destination: destiny,
+//         travelMode: google.maps.DirectionsTravelMode.DRIVING
+//     };
+
+//     directionsService.route(request,getRuta);
+// };
+
+// var getRuta = function(result, status) {
+//     if (status == google.maps.DirectionsStatus.OK) {
+//         directionsRenderer.setDirections(result);
+//     } else {
+//         alert("An error has occurred");
+//     }
+//     $("#destiny").val("");
+//     distancia;

@@ -81,16 +81,16 @@ $(document).ready(function() {
 		localStorage.setItem("nombre", nombre);
 		localStorage.setItem("apellido", apellido);
 
-  if (nombre.trim().length == 0 || apellido.trim().length == 0 ||  email.length == 0 ) {
+  if (nombre.split(' ').join('').length == 0 || apellido.split(' ').join('').length == 0 ||  email.length == 0 ) {
     // Si no se cumple la condicion...
     alert("Campos Obligatorios");
     return false;
   }
-  else if ((nombre.trim().length<2 || nombre.trim().length>20) || (apellido.trim().length<2 || apellido.trim().length>21) || (email.length<4 || email.length>51)) {   
+  else if ((nombre.split(' ').join('').length<2 || nombre.split(' ').join('').length>20) || (apellido.split(' ').join('').length<2 || apellido.split(' ').join('').length>21) || (email.length<4 || email.length>51)) {   
     alert("cantidad de letras no admitidas");
     return false;
   }
-  else if (!regexNombre.test(nombre) || !regexApellido.test(apellido) || !regexCorreo.test(correo)) {
+  else if (!regexNombre.test(nombre.split(' ').join('')) || !regexApellido.test(apellido.split(' ').join('')) || !regexCorreo.test(correo)) {
     // Si no se cumple la condicion...
     alert("Ingrese datos correctos");
     return false;
@@ -113,6 +113,11 @@ $(document).ready(function() {
 
 	$("#nombre").text(localStorage.getItem("nombre"));
 	$("#apellido").text(localStorage.getItem("apellido"));
+
+	$("#edit").click(function(){
+		var imagen= $("#edit").val();
+		$(this).parent().parent().next().children().attr("src", imagen);
+	})
 
 });
 		

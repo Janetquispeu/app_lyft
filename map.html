@@ -20,9 +20,9 @@
           </div>
           <section class="datos center-align">
             <span id="copiaNombre" class="black-text center-align num_user"></span>
-            <span id="copiaApellido" class="black-text center-align num_user">  </span>
+            <span id="copiaApellido" class="black-text center-align num_user"></span>
+            <a href="view.html"><span class="black-text name center-align view ">View profile</span></a>
           </section>
-          <a href="view.html"><span class="black-text name center-align view ">View profile</span></a>
        </div>
       </li>
       <li><div class="divider"></div></li>
@@ -42,6 +42,11 @@
   </section>
   <section class="direccion">
     <input type="text" name="direccion" placeholder="direccion" id="direccion">
+    <button type="button" class="button-map" id="destino">Set pickup</button>
+    <div class="fondo-opaco none " id="show-destiny">
+      <input type="text" id="destiny" class="direction" placeholder="Destination">
+      <button type="button" class="button-map" id="go-to">Confirm pickup</button>
+    </div>
   </section>
   <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
   <script type="text/javascript" src="materialize/js/materialize.min.js"></script>

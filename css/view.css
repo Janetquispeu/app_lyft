@@ -42,14 +42,21 @@
     width: 24%;
 	}
 	#nombre {
-    padding-left: 25%;
-    font-size: 201%;
+    padding-left: 12%;
+    font-size: 150%;
 	}
 	#apellido {
-    font-size: 201%;
+    font-size: 150%;
 	}
 	.mt {
-    padding: 12%;
-    font-size: 207%;
+      padding: 13% 5% 7% 5%;
+  	font-size: 145%;
+  }
+  #btn_left{
+  	margin: 9% 5%;
+  	font-size: 67%;
+  }
+  #edit{
+  	margin: 13% 0 0 0;
   }
 }
