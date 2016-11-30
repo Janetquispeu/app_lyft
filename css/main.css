@@ -82,3 +82,40 @@ body{
 	  width: 32%;
 	}
 }
+<<<<<<< HEAD
+=======
+@media(max-width: 1024px){
+	.contenedorLogoLyft{
+  	padding-top: 25%;
+	}
+	.contenedorBigoteLyft {
+    padding-bottom: 6%;
+  }
+}
+@media(max-width: 768px){
+	.contenedorLogoLyft{
+  	padding-top: 18%;
+	}
+	.contenedorBigoteLyft {
+    padding-bottom: 6%;
+  }
+}
+@media (min-width: 667px) and (max-width: 736px){
+	.contenedorLogoLyft {
+    padding-top: 6%;
+  }
+}
+@media (min-width: 568px) and (max-width: 666px){
+	.contenedorLogoLyft {
+    padding-top: 10%;
+  }
+}
+@media(max-width: 414px){
+	.contenedorLogoLyft{
+  	position: relative;
+  	padding-top: 57%;
+	}
+}
+
+
+>>>>>>> deacda774788aecc52d274df777f179c936689d0
