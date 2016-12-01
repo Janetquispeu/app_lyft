@@ -146,7 +146,8 @@ $(document).ready(function() {
           jQuery('#usuarioLogo').attr('src', origen.result);
           window.obtenerMedidas();
           var perfil=origen.result;
-          localStorage.setItem("imagen", perfil);	    		
+          localStorage.setItem("imagen", perfil);  
+          $("#usuarioLogo").attr("src", localStorage.getItem("imagen")); 		
         }
       };
       Lector.onerror = function(e) {
@@ -192,9 +193,8 @@ $(document).ready(function() {
 	    jQuery('#infoTamaño').text('');
 	  });
 	});
-
-	$(".usuario_icono").attr("src", localStorage.getItem("imagen"));
-	$(".usuario_icono_map").attr("src", localStorage.getItem("imagen"));
+  	$(".usuario_icono").attr("src", localStorage.getItem("imagen"));
+		$(".usuario_icono_map").attr("src", localStorage.getItem("imagen"));
 });
 		
 
