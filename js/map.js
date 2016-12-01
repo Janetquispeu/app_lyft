@@ -51,69 +51,42 @@ var funcionExito = function(posicion) {
     }
     $("#direccion").val(dir);
   });
-  
 
-  
-    
-};
+  $("#destino").click(function(){
+    GMaps.geocode({
+      address: $('#direccion').val(),
+      callback: function(results, status) {
+        if (status == 'OK') {
+          var latlng = results[0].geometry.location;
+          map.setCenter(latlng.lat(), latlng.lng());
+          map.addMarker({
+            lat: latlng.lat(),
+            lng: latlng.lng()
+          });
 
+          map.drawRoute({
+            origin: [lat, lon],
+            destination: [latlng.lat(), latlng.lng()],
+            travelMode: 'driving',
+            strokeColor: '#131540',
+            strokeOpacity: 0.6,
+            strokeWeight: 6
+          });
+        }
+      }
+    }); 
+  });
+};  
 
 var funcionError = function (error) {
   console.log(error);
 };
 
+
+
  $(document).ready(cargarPagina);
 
 
-// var distancia = function() {
-//   var distancia = ((google.maps.geometry.spherical.computeDistanceBetween(lat,lon, desLatlon))/1000).toFixed(2);
-//   var costo = (2.17*distancia).toFixed(2);
-//   alert("The approximate distance is " + distancia + "km" + "\n"
-//       + "The approximate cost is $. " + costo);
-//   };
-// };
-// $("#destino").click(function(evento){
-//   $(".fondo-opaco").removeClass("none");
-//   $(".fondo-opaco").css("display","block");
+// --------------------------
 
-// });
-// $("#go-to").click(travelToAddress);
-// $(document).ready(cargarPagina);
-  
 
-// var desLatlon;
-//   var directionsRenderer;
-//   var directionsService;
-
-  
-//   var travelToAddress = function() {
-//     var destiny = document.getElementById("destiny").value;
-//     directionsService = new google.maps.DirectionsService();
-
-//     var geocoder = new google.maps.Geocoder();
-//     geocoder.geocode( { "address": destiny}, function(results, status) {
-//       if (status == google.maps.GeocoderStatus.OK) {
-//           var latitude = results[0].geometry.location.lat();
-//           var  longitude = results[0].geometry.location.lng();
-//           desLatlon =new google.maps.LatLng(latitude, longitude);
-//       } 
-//     });
-
-//     var request = {
-//         lat: lat,
-//         lng: lon,
-//         destination: destiny,
-//         travelMode: google.maps.DirectionsTravelMode.DRIVING
-//     };
-
-//     directionsService.route(request,getRuta);
-// };
-
-// var getRuta = function(result, status) {
-//     if (status == google.maps.DirectionsStatus.OK) {
-//         directionsRenderer.setDirections(result);
-//     } else {
-//         alert("An error has occurred");
-//     }
-//     $("#destiny").val("");
-//     distancia;
