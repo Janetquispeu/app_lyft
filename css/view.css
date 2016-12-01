@@ -18,6 +18,7 @@
 	width: 10%;
 	height: 143px;
 	margin-bottom: 3%;
+	border-radius: 100%;
 }
 #nombre, #apellido{
 	font-size: 250%;
