@@ -18,20 +18,20 @@
 };
 
 var funcionExito = function(posicion) {
-  var lat = posicion.coords.latitude;
-  var lon = posicion.coords.longitude;
+  var lati = posicion.coords.latitude;
+  var long = posicion.coords.longitude;
   var map=  new GMaps({
     div: '#map',
     zoom: 15,
-    lat: lat,
-    lng: lon,
+    lat: lati,
+    lng: long,
     mapTypeControl: false,
     zoomControl: false,
     streetViewControl: false
   });
   map.addMarker({
-    lat: lat,
-    lng: lon,
+    lat: lati,
+    lng: long,
     title: 'Lima',
     click: function(e) {
       alert('You clicked in this marker');
@@ -39,7 +39,7 @@ var funcionExito = function(posicion) {
   });
 
   var dir = "";
-  var latlng = new google.maps.LatLng(lat, lon);
+  var latlng = new google.maps.LatLng(lati, long);
   geocoder = new google.maps.Geocoder();
   geocoder.geocode({"latLng": latlng}, function(results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
@@ -59,17 +59,22 @@ var funcionExito = function(posicion) {
         if (status == 'OK') {
           var latlng = results[0].geometry.location;
           map.setCenter(latlng.lat(), latlng.lng());
+          
           map.addMarker({
             lat: latlng.lat(),
-            lng: latlng.lng()
+            lng: latlng.lng(),
+            title: 'Lima',
+            click: function(e) {
+              alert('You clicked in this marker');
+            }
           });
-
           map.drawRoute({
-            origin: [lat, lon],
+            origin: [lati, long],
+            zoom:1,
             destination: [latlng.lat(), latlng.lng()],
             travelMode: 'driving',
-            strokeColor: '#131540',
-            strokeOpacity: 0.6,
+            strokeColor: '#4285F4',
+            strokeOpacity: 0.9,
             strokeWeight: 6
           });
         }
