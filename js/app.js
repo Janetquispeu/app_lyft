@@ -145,6 +145,8 @@ $(document).ready(function() {
         }else {
           jQuery('#usuarioLogo').attr('src', origen.result);
           window.obtenerMedidas();
+          var perfil=origen.result;
+          localStorage.setItem("imagen", perfil);	    		
         }
       };
       Lector.onerror = function(e) {
@@ -190,6 +192,9 @@ $(document).ready(function() {
 	    jQuery('#infoTamaño').text('');
 	  });
 	});
+
+	$(".usuario_icono").attr("src", localStorage.getItem("imagen"));
+	$(".usuario_icono_map").attr("src", localStorage.getItem("imagen"));
 });
 		
 

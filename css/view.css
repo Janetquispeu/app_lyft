@@ -16,30 +16,42 @@
 }
 #usuarioLogo{
 	width: 10%;
+	height: 143px;
+	margin-bottom: 3%;
 }
-#nombre{
-	padding-left: 43%;
+#nombre, #apellido{
 	font-size: 250%;
-}
-#apellido{
-	font-size: 250%;
+	display: block;
 }
 .mt{
+	text-align: left;
 	padding: 5%;
   font-size: 250%;
   border-bottom: 1px solid black;
 }
 .iconos{
-	float: left;
-	padding-left: 6%;
+	margin-left: 28%;
+  margin-right: 10%;
+}
+#cancelar{
+	margin-top: 6%;
+	width: 44%;
+}
+#botonera{
+	margin-top: 3%;
+  position: absolute;
+  margin-left: 19%;
 }
 
 @media only screen and (max-width: 375px){
 	.bg{
-		height: 27vh;
+		height: 40vh;
+		position: relative;
 	}
 	#usuarioLogo {
-    width: 24%;
+    width: 40%;
+    height: 134px;
+    border-radius: 100%;
 	}
 	#nombre {
     padding-left: 12%;
@@ -54,9 +66,22 @@
   }
   #btn_left{
   	margin: 9% 5%;
-  	font-size: 67%;
+  	font-size: 80%;
   }
   #archivo{
   	margin: 13% 0 0 0;
+  }
+  .iconos{
+  	margin-left: 9%;
+  }
+  #botonera{
+	  position: absolute;
+	  margin: 0 0 0 7%;
+  	bottom: 22px;
+	  bottom: 0;
+  }
+  #cancelar{
+  	margin-top: 3%;
+  	margin-bottom: 3%;
   }
 }

@@ -13,9 +13,11 @@ body{
 	opacity: 0.8;
 }
 .usuario_icono_map{
-	margin-top: 13%;
-  margin-left: 10%;
+	margin-top: 4%;
+  margin-left: 4%;
   width: 9%;
+  height: 100%;
+  border-radius: 100%;
   position: absolute;
 }
 .view{
@@ -27,34 +29,36 @@ body{
   padding-bottom: 6%;
 }
 .num_user{
-  font-size: 40px;
+  font-size: 26px;
 }
 .cir_user{
   margin-top: 2%;
-  margin-left: -26%;
-  width: 29%;
 }
 .datos{
-  width: 75%;
+  width: 100%;
   margin-bottom: 16%;
 }
 .pd{
-  font-size: 45px !important;
-  height: 120px !important;
-  padding: 40px 30px !important;
+  font-size: 36px !important;
+  height: 94px !important;
+  padding: 26px 71px !important;
 }
 .icon{
-  font-size: 55px !important;
+  font-size: 45px !important;
+  padding-right: 22%;
 }
 #copiaNombre{
+  display: block;
   padding-right:10px;
+}
+#copiaApellido{
+  margin-top: -10px;
 }
 .direccion{
   position: absolute;
-  bottom: 59px;
-  width: 68%;
-  left: 29%;
-
+  bottom: 0px;
+  width: 74%;
+  left: 16%;
 }
 #direccion{
   background-color: #C61167;
@@ -62,13 +66,21 @@ body{
   border-radius: 20px;
   color: white;
 }
+#destino{
+  width: 100%;
+  padding: 7px;
+  margin-bottom: 3%;
+  border-radius: 14px;
+}
 header, main, footer {
       padding-left: 300px;
 }
 .none {
   display: none;
 }
-
+.background{
+  width: 100%;
+}
 @media only screen and (max-width : 375px) {
   header, main, footer {
     padding-left: 0;
@@ -78,10 +90,14 @@ header, main, footer {
   }
   .usuario_icono{
     width: 55% !important;
-    height: 88px;
+    height: 100px;
     display: flex;
+    border-radius: 100%;
     margin-right: auto;
     margin-left: auto !important;
+  }
+  .usuario_icono_map {
+    height: 38px;
   }
   .side-nav-usuario{
     width: 240px !important;
@@ -116,9 +132,11 @@ header, main, footer {
     font-size: 18px;
   }
   #copiaNombre{
-    margin: 0 22px;
+    margin: 0 0;
+    display: block;
   }
   #copiaApellido{
     margin-top: -18px;
+    display: block;
   }
 }
